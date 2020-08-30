@@ -25,10 +25,43 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button id="load">Load User Data</button>	
+            <button id="display">Display User</button>	
         </div>	
     </div>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+      <p>FAVORITE QUOTE:</p>
+    <p>"{{this}}"</p>
+    </script>
+
+    <script id="bacon-template" type="text/x-handlebars-template">
+      <p>ABOUT ME:</p>
+    <div class="bacon">{{this}}</div>
+    </script>
+
+    <script id="mainuser-template" type="text/x-handlebars-template">
+      <img src="{{img}}" id="picture">
+      <div class="mainuser-info">
+        <p>{{name}}</p>
+        <p>{{addreses}}</p>
+      </div>
+    </script>
+
+    <script id="friends-template" type="text/x-handlebars-template">
+    {{#each friends}}
+    <ul>
+      <li>{{this}}</li>
+    </ul>
+    {{/each}}
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
